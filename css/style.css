@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Permanent+Marker&family=Poppins:wght@400;600;900&family=Rubik:wght@400;500;600;700&display=swap");
+:root {
+  --primary-color-dimWhite: #f3f5f8;
+  --secondary-color-darkGray: #3d535f;
+  --third-color-voilet: #007bff;
+  --four-color-redorangemix: #ff0d00;
+}
+/* 
+Example
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.alert {
+  background-color: var(--secondary-color);
+  color: white;
+} 
+*/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+/* .cols {
+  width: 50%;
+}
+
+.cols0 {
+  width: 60%;
+  z-index: 5;
+} */
+body {
+  overflow: hidden;
+}
+
+/* Area-Header */
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 80px;
+  line-height: 80px;
+  z-index: 1000;
+}
+
+.container {
+  width: 100%;
+  /* min-height: 100vh; */
+}
+
+.logo {
+  display: flex;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--secondary-color-darkGray);
+  letter-spacing: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+b {
+  font-size: 70px;
+  color: var(--third-color-voilet);
+}
+
+.nav-items {
+  display: flex;
+}
+
+.nav-items li {
+  margin: 0 15px;
+}
+
+.nav-items li a {
+  color: var(--secondary-color-darkGray);
+  margin-left: 60px;
+  letter-spacing: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.55s ease;
+  text-transform: capitalize;
+}
+.nav-items a:hover {
+  border-bottom: 2px solid var(--third-color-voilet);
+}
+
+.links a {
+  font-size: px;
+  color: var(--secondary-color-darkGray);
+  margin: 35px 10px;
+  transition: all 0.55s ease;
+}
+.links a:hover {
+  color: var(--four-color-redorangemix);
+}
+
+/* Area-Section-Hero */
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 80px);
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 0 9.6%;
+  overflow: hidden;
+}
+.wrapper::before {
+  position: absolute;
+  content: "";
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  left: -12%;
+  top: 40%;
+  background: linear-gradient(45deg, var(--four-color-redorangemix), pink);
+  animation: object1 6s linear infinite;
+  filter: saturate(200%);
+  z-index: -1;
+}
+.wrapper::after {
+  position: absolute;
+  content: "";
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  left: 35%;
+  top: 12%;
+  background: linear-gradient(45deg, var(--four-color-redorangemix), pink);
+  animation: object2 6s linear infinite;
+  filter: saturate(200%);
+  z-index: -1;
+}
+@keyframes object1 {
+  50% {
+    left: -13%;
+    top: 41%;
+  }
+}
+
+@keyframes object2 {
+  50% {
+    left: 35%;
+    top: 10%;
+  }
+}
+
+.topline {
+  display: block;
+  position: relative;
+  font-size: 35px;
+  letter-spacing: 5px;
+  color: var(--secondary-color-darkGray);
+}
+
+.topline::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 45px;
+  bottom: 10px;
+  background-color: var(--third-color-voilet);
+}
+
+h1 {
+  display: block;
+  font-size: 7em;
+  font-weight: 900;
+  color: var(--secondary-color-darkGray);
+}
+
+.multiText {
+  color: var(--third-color-voilet);
+  text-transform: capitalize;
+}
+
+p {
+  display: block;
+  width: 90%;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.hero-links a {
+  display: inline-block;
+  color: white;
+  background: var(--secondary-color-darkGray);
+  border: 1px solid transparent;
+  padding: 12px 30px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.55s ease;
+}
+
+.hero-links a:hover {
+  background: var(--third-color-voilet);
+  border: 1px solid white;
+  transform: translateX(8px);
+}
+
+.hero-links a.ctaa {
+  background: var(--third-color-voilet);
+  border: 1px solid var(--third-color-voilet);
+  margin-left: 20px;
+}
+
+.hero-links a.ctaa:hover {
+  background: var(--secondary-color-darkGray);
+  border: 1px solid var(--secondary-color-darkGray);
+}
+hero-links a.ctaa i {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.imgBox {
+  display: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.imgBox img {
+  position: relative;
+  height: 70%;
+  width: calc(100% - 100px);
+  top: 0px;
+  right: 50px;
+  transform: rotateY(180deg);
+  animation: animateUser 4s linear infinite;
+}
+@keyframes animateUser {
+  50% {
+    right: 40px;
+    top: -50px;
+  }
+}
+
+.imgBox #splash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -50%) rotate(-35deg);
+  filter: saturate(200%);
+  width: 50%;
+  animation: animate 4s ease infinite;
+  z-index: -1;
+}
+@keyframes animate {
+  50% {
+    top: 49%;
+    left: 51%;
+    width: 53%;
+  }
+}
